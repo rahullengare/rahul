@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Regstration Form</title>
+</head>
+<body>
+    <style>
+        body{
+            display: grid;
+            place-items: center ;
+            margin-top: 100px;
+        }
+        h1{
+            text-align: center;
+        }
+        #Register{
+            position: relative;
+            display: none;
+            border: 1px solid black;
+            width: 300px;
+            height: 400px;
+            top: 10px;
+        }
+        #login{
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            width: 300px;
+            height: 400px;
+            /* display: none   ; */
+        }
+        button{
+            margin-left: 35%;
+            margin-top: 20px;
+            border-radius: 20px;
+            padding: 5px 20px;
+            border: 1px solid black;
+            cursor: pointer;
+            background: transparent;
+            font-size: 14px;
+        }
+        input{
+            margin-top: 20px;
+            margin-left: 40px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid black;
+            width: 220px;
+            padding: 5px 0;
+            padding-left: 2px;
+        }
+    </style>
+    <div id="login">
+        <h1>Login</h1>
+        <input type="email" placeholder="Enter Email" id="email"><br><br>
+        <input type="password" placeholder="Enter Password" id="password"><br><br>
+        <button id="loginSBtn">Submit</button><br>
+        <button id="register">Register</button>
+    </div>
+    <div id="Register">
+        <h1>Register</h1>
+        <input type="text" placeholder="Enter Name" id="name"><br><br>
+        <input type="email" placeholder="Enter Email" id="email"><br><br>
+        <input type="password" placeholder="Enter Password" id="password"><br><br>
+        <button id="loginSBtn">Submit</button><br>
+        <button id="loginBtn" style="margin-left: 110px;">Login</button>
+    </div>
+</body>
+<script>
+    let register = document.getElementById("register");
+    register.addEventListener("click",()=>{
+        let regBox = document.getElementById("Register");
+        let loginBox = document.getElementById("login");
+        loginBox.style.display = "none"
+        regBox.style.display = "inline"
+    })
+    let loginbtn = document.getElementById("loginBtn");
+    loginbtn.addEventListener("click",()=>{ 
+        let regBox = document.getElementById("Register");
+        let loginBox = document.getElementById("login");
+        loginBox.style.display = "inline"
+        regBox.style.display = "none"
+    })
+</script>
+</html>
