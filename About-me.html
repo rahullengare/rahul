@@ -4,54 +4,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+  font-family: Cambria;
+  margin: 1px;
 }
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
 .about-section {
-  padding: 50px;
+  padding: 2px;
   text-align: center;
   background-color: #474e5d;
   color: white;
 }
-
-.container {
-  padding: 0 16px;
+.column {
+  float: left;
+  width: 70%;
+  text-align: center;
+  margin-left: 15%;
+  margin-bottom: 16px;
+  padding: 0 8px;
 }
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
+.card {
+  box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
+  margin: 8px;
 }
-
 .title {
-  color: grey;
+  color: #0600ff;
 }
-
 .button {
   border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
+  padding: 5px;
   color: white;
   background-color: #000;
   text-align: center;
@@ -61,63 +40,24 @@ html {
 .button:hover {
   background-color: #555;
 }
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
 </style>
 </head>
 <body>
-
 <div class="about-section">
-  <h1>About Us Page</h1>
-  <p>Some text about who we are and what we do.</p>
-  <p>Resize the browser window to see that this page is responsive by the way.</p>
+  <h1>About Me Page</h1>
+  <p>BCA Student in SGMCK</p>
 </div>
-<h2 style="text-align:center">Our Team</h2>
-<div class="row">
   <div class="column">
     <div class="card">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <img src="my.png" alt="RAHUL" style="width:60%, hight:45%">
       <div class="container">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>jane@example.com</p>
+        <h2>RAHUL LENGARE</h2>
+        <p class="title">Software Developer and Designer</p>
+        <p>My name's <b>RAHUL. </b> I completed my BCA-II in 2024 and have 2 years of experience working as Project Leader in college time. I am 20 year old. My city name is Vita. I am learing on SGM College Karad.</p>
+        <p class="title">lengarerahul5@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-      <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-      <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-</div>
-
+  </div>  
 </body>
 </html>
