@@ -1,84 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
-  font-family: Cambria;
-  margin: 1px;
+  	font-family: Cambria;
+  	margin: 1px;
 }
-.about-section {
-  padding: 2px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
+.header{
+  	padding: 1px;
+  	text-align: center;
+  	background-color: #474e5d;
+  	color: white;
 }
 .column {
-  float: left;
-  width: 70%;
-  text-align: center;
-  margin-left: 15%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+  	float: left;
+  	width: 70%;
+  	text-align: center;
+  	margin-left: 15%;
+  	margin-bottom: 16px;
+  	padding: 0 8px;
 }
 .card {
-  box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  	box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
+  	margin: 8px;
 }
 .title {
-  color: #0600ff;
+  	color: #0600ff;
 }
 .button {
-  border: none;
-  padding: 5px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
+  	border: none;
+ 	padding: 5px;
+ 	color: white;
+ 	background-color: #000;
+  	text-align: center;
+  	cursor: pointer;
+  	width: 100%;
 }
 .button:hover {
-  background-color: #555;
+  	background-color: #555;
 }
 </style>
 </head>
 <body>
-<div class="about-section">
-  <h1>About Me Page</h1>
-  <p>BCA Student in SGMCK</p>
+<div class="header">
+  	<h1> My Profile </h1>
+  	<p>BCA Student in SGMCK</p>
 </div>
-  <div class="column">
-    <div class="card">
-      <img src="my.png" alt="RAHUL" style="width:60%, hight:45%">
-      <div class="container">
-        <h2>RAHUL LENGARE</h2>
-        <p class="title">Software Developer and Designer</p>
-        <p>My name's <b>RAHUL. </b> I completed my BCA-II in 2024 and have 2 years of experience working as Project Leader in college time. I am 20 year old. My city name is Vita. I am learing on SGM College Karad.</p>
-        <p class="title">lengarerahul5@gmail.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
+<div class="column">
+    	<div class="card">
+      		<img src="my.jpg" alt="RAHUL" style="width:30%; height:250px; border: 5px solid black; padding: 8px; border-radius: 40px;">
+      		<div class="container">
+        		<h2>RAHUL LENGARE</h2>
+        		<p class="title"><b>JAVA</b> Developer</p>
+        		<p>"Hi, I'm <b>Rahul.</b> I'm 20 years old and studying &#9997; BCA at SGM College Karad. I am learning to become a Java Developer and excited to share my journey and connect with others in the tech community. With a passion for technology and innovation, I'm dedicated to honing my skills in the IT sector."</p>
+        		<a href="contact.html"><button class="button">&#128073; Contact Me &#128072;</button></a>
+      		</div>
+    	</div>
   </div>  
-  <form action="https://api.web3forms.com/submit" method="POST">
-
-    <!-- Replace with your Access Key -->
-    <input type="hidden" name="access_key" value="b51be239-a44d-446a-bbe2-0844542d24e1">
-
-    <!-- Form Inputs. Each input must have a name="" attribute -->
-    <label>Name : </label>
-    <input type="text" name="name" required>
-    </br><label>Email :</label>
-    <input type="email" name="email" required>
-    <textarea name="message" required></textarea>
-
-    <!-- Honeypot Spam Protection -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-    <!-- Custom Confirmation / Success Page -->
-    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-
-    <button type="submit">Submit Form</button>
-
-  </form>
 </body>
 </html>
