@@ -3,99 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Contact Form</title>
+<title>Contact Us</title>
 <style>
   body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f8f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 20px;
   }
-  .form-container {
-    width: 300px;
-    background-color: #fff;
+  .container {
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    animation: fadeIn 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
   }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .form-container h2 {
+  h1 {
+    color: #333;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
   }
-  .form-container label {
+  .option-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .option-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+  }
+  .option-buttons button:hover {
+    background-color: #0056b3;
+  }
+  .whatsapp-link, .email-form {
+    display: none;
+  }
+  .whatsapp-link img {
+    width: 50px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     color: #555;
   }
-  .form-container input[type="text"],
-  .form-container input[type="email"],
-  .form-container textarea {
-    width: calc(100% - 20px);
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+    font-size: 14px;
   }
-  .form-container input[type="text"]:focus,
-  .form-container input[type="email"]:focus,
-  .form-container textarea:focus {
-    border-color: #4CAF50;
+  textarea {
+    height: 80px;
   }
-  .form-container textarea {
-    height: 120px;
-  }
-  .form-container button {
-    background-color: #4CAF50;
+  button.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
     color: white;
-    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s ease;
   }
-  .form-container button:hover {
-    background-color: #45a049;
+  button.submit-btn:hover {
+    background-color: #218838;
   }
 </style>
 </head>
 <body>
-  <h1>Email or Whatsapp</h1>
-<div class="main">
-          <h1>Start Chatting on WhatsApp</h1>
-        <p>Click the WhatsApp logo below to start a conversation!</p>
-        <a href="https://wa.me/+918668503391?text=Hi%20Rahul%20How%20to%20Get%20this%20page%20code%3F        " target="_blank">
-            <img src="img.svg" alt="WhatsApp Logo">
-        </a>
+<div class="container">
+  <h1>Contact Us</h1>
+  <div class="option-buttons">
+    <button onclick="showWhatsApp()">Contact via WhatsApp</button>
+    <button onclick="showEmail()">Contact via Email</button>
+  </div>
+
+  <div class="whatsapp-link" id="whatsappLink">
+    <h2>Chat with Us on WhatsApp</h2>
+    <a href="https://wa.me/+918668503391?text=Hi%20Rahul%20How%20to%20Get%20this%20page%20code%3F" target="_blank">
+      <img src="img.svg" alt="WhatsApp Logo">
+    </a>
+  </div>
+
+  <div class="email-form" id="emailForm">
+    <h2>Email Us</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="b51be239-a44d-446a-bbe2-0844542d24e1">
+      
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email.." required>
+      </div>
+      
+      <div class="form-group">
+        <label for="contactno">Contact Number:</label>
+        <input type="text" id="contactno" name="contactno" placeholder="Your contact number..">
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message/Comment:</label>
+        <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+      </div>
+      
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
 </div>
-<div class="form-container">
-  <h2>Contact Us</h2>
-  <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="b51be239-a44d-446a-bbe2-0844542d24e1">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your name.." required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your email.." required>
-    <label for="contactno">Contact Number:</label>
-    <input type="text" id="contactno" name="contactno" placeholder="Your contact number..">
-    <label for="message">Message/Comment:</label>
-    <textarea id="message" name="message" placeholder="Write something.." required></textarea>
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-    <button type="submit">Submit</button>
-  </form>
-</div>
+
+<script>
+  function showWhatsApp() {
+    document.getElementById('whatsappLink').style.display = 'block';
+    document.getElementById('emailForm').style.display = 'none';
+  }
+
+  function showEmail() {
+    document.getElementById('whatsappLink').style.display = 'none';
+    document.getElementById('emailForm').style.display = 'block';
+  }
+</script>
 </body>
 </html>
